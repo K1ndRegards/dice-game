@@ -1,0 +1,177 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* Custom Properties */
+:root {
+  --primary-color: #c7365f;
+}
+
+/* Utility classes */
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+/* General Styling */
+body {
+  height: 100vh;
+  background: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Page Styling */
+section.the-game {
+  display: flex;
+  padding-top: 15.5rem;
+}
+
+/* Player Cards */
+section.the-game .player {
+  z-index: 1;
+  position: relative;
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.8;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  padding: 90px;
+
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(200px);
+  filter: blur();
+}
+
+section.the-game .active {
+  z-index: 2;
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+section.the-game .player-1 {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+section.the-game .player-2 {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+section.the-game .active h2 {
+  font-weight: 700;
+}
+
+section.the-game .player h2 {
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+section.the-game .player .p1-total-score,
+section.the-game .player .p2-total-score {
+  margin-bottom: 150px;
+  color: var(--primary-color);
+  font-size: 8rem;
+  text-transform: uppercase;
+}
+
+section.the-game .player .score-frame {
+  border-radius: 10px;
+  padding: 20px 60px;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 4rem;
+}
+
+section.the-game .player .score-frame .p1-current-score,
+section.the-game .player .score-frame .p2-current-score {
+  font-size: 3.5rem;
+}
+/* Dice image */
+section.the-game img {
+  z-index: 10;
+  position: absolute;
+  top: 30rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10rem;
+  height: 10rem;
+  box-shadow: 0 0 5rem 1rem rgba(0, 0, 0, 0.25);
+}
+
+/* Winner Card Styling */
+section.the-game .win-bg {
+  color: var(--primary-color);
+  background-color: #2f2f2f;
+}
+
+section.the-game .win-bg h2 {
+  color: var(--primary-color);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  opacity: 0.8;
+  transition: all 0.2s;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+  border-radius: 3rem;
+  border: none;
+  outline: none;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+.btn:active {
+  box-shadow: 0 1.25rem 3rem rgba(0, 0, 0, 0.2);
+}
+
+section.the-game button.new-game,
+section.the-game button.roll-dice,
+section.the-game button.hold {
+  z-index: 3;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+section.the-game button.new-game {
+  top: 20rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+section.the-game button.new-game:active {
+  top: calc(20rem + 5px);
+}
+
+section.the-game button.roll-dice {
+  top: 54rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+section.the-game button.roll-dice:active {
+  top: calc(54rem + 5px);
+}
+
+section.the-game button.hold {
+  top: 60rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+section.the-game button.hold:active {
+  top: calc(60rem + 5px);
+}
